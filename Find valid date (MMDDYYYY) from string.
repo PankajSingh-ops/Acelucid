@@ -1,0 +1,12 @@
+import re
+
+text = input("what is string: -  ")
+
+pattern = r'\b(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])(19|20)\d{2}\b'
+
+match = re.search(pattern, text)
+
+if match:
+    print(match.group())
+else:
+    print("No valid date found.")
